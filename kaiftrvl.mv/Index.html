@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaif's Luxury Resorts - Maldives</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <img src="kaifmv logo/kaifmv logo.png" alt="Kaif's Resorts Logo" class="logo">
+      <nav class="nav-links">
+        <a href="#resorts">Resorts</a>
+        <a href="#booking">Book Now</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover Paradise</h1>
+      <p>Experience luxury resort stays in the stunning Maldives</p>
+      <button class="cta-button" onclick="document.getElementById('resorts').scrollIntoView();">Explore Resorts</button>
+    </div>
+  </section>
+
+  <section id="resorts" class="resorts-section">
+    <h2>Featured Resorts</h2>
+    <p class="section-subtitle">Handpicked luxury resorts for your perfect getaway</p>
+    
+    <div class="resorts-grid">
+      <div class="resort-card">
+        <div class="resort-image" style="background: url('sunsiyam/sunsiyam.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="resort-info">
+          <h3>Sun Siyam Olhuveli Beach & Spa Resort</h3>
+          <p class="location">📍 South Malé Atoll </p>
+          <p class="price">From <strong>$800/night</strong></p>
+          <p class="description">Pristine beaches, overwater villas, and world-class dining experiences.</p>
+          <div class="rating">⭐ 4.8</div>
+          <button class="details-btn" onclick="goToBooking()">Book Now</button>
+        </div>
+      </div>
+
+      <div class="resort-card">
+        <div class="resort-image" style="background: url('coco bodu/coco bodu.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="resort-info">
+          <h3>Coco Bodu Hithi</h3>
+          <p class="location">📍 Kaafu Atoll</p>
+          <p class="price">From <strong>$950/night</strong></p>
+          <p class="description">Award-winning resort with marine sanctuary, spa, and exceptional service.</p>
+          <div class="rating">⭐ 4.9</div>
+          <button class="details-btn" onclick="goToBooking()">Book Now</button>
+        </div>
+      </div>
+
+      <div class="resort-card">
+        <div class="resort-image" style="background: url('Joali/jaoli.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="resort-info">
+          <h3> JOALI Maldives Resort & Spa</h3>
+          <p class="location">📍Raa Atoll </p>
+          <p class="price">From <strong>$1,100/night</strong></p>
+          <p class="description">Famous for underwater restaurant dining and premium water villas.</p>
+          <div class="rating">⭐ 4.9</div>
+          <button class="details-btn" onclick="goToBooking()">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking-preview">
+    <h2>Ready to Book?</h2>
+    <p>Start your paradise journey with Kaif's Resorts</p>
+    <button class="cta-button" onclick="goToBooking()">Go to Booking Form</button>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Kaif's Resorts</h4>
+        <p>Your trusted partner for luxury Maldives travel</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#resorts">Resorts</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>📍 Maldives</p>
+        <p>📧 info@kaifmv.ltd.com</p>
+        <p>📱 +960-767-5577</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 Kaif's Resorts. All rights reserved. Education puporses only</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

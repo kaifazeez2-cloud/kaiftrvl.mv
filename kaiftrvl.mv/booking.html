@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Resort - Kaif's Resorts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <img src="kaifmv logo/kaifmv logo.png" alt="Kaif's Resorts Logo" class="logo">
+      <nav class="nav-links">
+        <a href="Index.html">Home</a>
+        <a href="Index.html#resorts">Resorts</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="booking-hero">
+    <h1>Complete Your Booking</h1>
+    <p>Fill in your details to reserve your dream resort stay</p>
+  </div>
+
+  <form onsubmit="submitForm(event)">
+    <h2>Booking Information</h2>
+    <input type="text" placeholder="Full Name" name="fullName" required>
+    <input type="email" placeholder="Email Address" name="email" required>
+    <input type="text" placeholder="Resort Name" name="resort" required>
+    <input type="date" placeholder="Check-in Date" name="checkInDate" required>
+    <input type="number" placeholder="Number of Guests" id="guestCount" name="guestCount" min="1" max="10" required onchange="generateGuestFields()">
+    
+    <div id="guestNamesContainer" style="display: none; margin-top: 20px;">
+      <h3 style="color: #333; margin-bottom: 15px;">Guest Names</h3>
+      <div id="guestNameFields"></div>
+    </div>
+    
+    <button type="submit">Confirm Booking</button>
+  </form>
+
+  <div style="max-width: 1200px; margin: 3rem auto; padding: 2rem;">
+    <img src="resort image/ssiv_general_04.jpg" alt="Resort image" style="width: 100%; border-radius: 12px;">
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Kaif's Resorts</h4>
+        <p>Your trusted luxury resort partner</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Index.html#resorts">Resorts</a></li>
+          <li><a href="booking.html">Booking</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>📍 Maldives</p>
+        <p>📧 info@kaifs.com</p>
+        <p>📱 +960-123-4567</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 Kaif's Resorts. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function generateGuestFields() {
+      const guestCount = document.getElementById('guestCount').value;
+      const container = document.getElementById('guestNameFields');
+      const guestNamesContainer = document.getElementById('guestNamesContainer');
+      
+      container.innerHTML = '';
+      
+      if (guestCount && guestCount > 0) {
+        guestNamesContainer.style.display = 'block';
+        
+        for (let i = 1; i <= guestCount; i++) {
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.placeholder = `Guest ${i} Name`;
+          input.required = true;
+          input.style.marginBottom = '10px';
+          container.appendChild(input);
+        }
+      } else {
+        guestNamesContainer.style.display = 'none';
+      }
+    }
+    
+    function submitForm(e) {
+      e.preventDefault();
+      window.location.href = "thankyou.html";
+    }
+  </script>
+</body>
+</html>
